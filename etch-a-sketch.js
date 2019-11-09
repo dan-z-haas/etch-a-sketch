@@ -31,21 +31,6 @@ let fillGrid = function (divsPerSide) {
 
 fillGrid(divsPerSide);
 
-//          Resize Divs to fit Grid
-/*
-const gridDimensions = 1000;
-var divDimensions = gridDimensions/divsPerSide;
-
-var updateDivSize = function() {
-    divDimensions = gridDimensions/divsPerSide;
-    for (i=0;i<pixelArray.length;i++) {
-        pixelArray[i].style.length=divDimensions+"px";
-        pixelArray[i].style.width=divDimensions+"px";
-        };
-    }
-updateDivSize();
-*/
-
 //Hover effect
 
 var hoverEffect = function() {
@@ -70,6 +55,20 @@ rAndRButton.addEventListener('click', () => {
     divsPerSide = prompt("How many squares per side?", 10);
     fillGrid(divsPerSide,divsPerSide);
     pixelArray = document.querySelectorAll('.pixel');
-    //updateDivSize();
+    updateDivSize();
     hoverEffect();
 })
+
+//          Resize Divs to fit Grid
+
+const gridDimensions = 512;
+var divDimensions = gridDimensions/divsPerSide;
+
+var updateDivSize = function() {
+    divDimensions = gridDimensions/divsPerSide;
+    for (i=0;i<pixelArray.length;i++) {
+        pixelArray[i].style.height=divDimensions+"px";
+        pixelArray[i].style.width=divDimensions+"px";
+        };
+    }
+updateDivSize();
