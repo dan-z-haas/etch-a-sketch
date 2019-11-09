@@ -1,21 +1,23 @@
 body {
-    background-color:black;
-}
-
-div>div {
-    height: 50px;
-    width: 50px;
+    background-color:white;
 }
 
 #container {
     display:flex;
     flex-wrap:wrap;
     flex-direction:row; 
+    justify-content:center;
+}
+
+.centered {
+    display:flex;
+    justify-content:center;
 }
 
 .pixel {
     background-color: lightblue;
     border: 1px solid white;
+    box-sizing: border-box;
 }
 
 .pixel:hover {
